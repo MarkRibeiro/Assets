@@ -19,6 +19,7 @@ public class EnemyTracker : MonoBehaviour
         animator = this.transform.GetChild(0).GetComponent<Animator>();
         animator.SetBool("Andando",false);
         animator.SetBool("Atacando",false);
+        Player= GameObject.FindGameObjectWithTag("Player");
     }
 
 
@@ -46,6 +47,10 @@ public class EnemyTracker : MonoBehaviour
         animator.SetBool("Andando",true);
         transform.LookAt(Player.transform.position);
         transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z);
+        if(Player.transform.position.x<this.transform.position.x){
+            transform.rotation= new Quaternion(0,180,0,0);
+        }
+        else transform.rotation= new Quaternion(0,0,0,0);
 
         Vector3 direction = (Player.transform.position - this.transform.position).normalized;
 

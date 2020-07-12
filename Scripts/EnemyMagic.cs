@@ -21,7 +21,8 @@ public class EnemyMagic : MonoBehaviour
     private void Start()
     {
         currentTime = TimeToChangeAreas;
-        animator= this.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        animator = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,56 +30,64 @@ public class EnemyMagic : MonoBehaviour
     {
         if (Vector2.Distance(Player.transform.position, this.transform.position) < Miopia)
         {
-             if (currentTime<=2){
-                     animator.SetBool("poder",true);  
-                }
+            if (Player.transform.position.x < this.transform.position.x)
+            {
+                transform.rotation = new Quaternion(0, 180, 0, 0);
+            }
+            else transform.rotation = new Quaternion(0, 0, 0, 0);
+
+
+            if (currentTime <= 2)
+            {
+                animator.SetBool("poder", true);
+            }
             if (currentTime <= 0)
             {
-                animator.SetBool("poder",false);
-              
-                
+                animator.SetBool("poder", false);
+
+
                 if (blueArea)
                 {
-                    
+
                     blueArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(blueArea));
-                     
+
                 }
                 if (redArea)
                 {
-                     
+
                     redArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(redArea));
-                     
+
                 }
                 if (yellowArea)
                 {
-                      
+
                     yellowArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(yellowArea));
-                     
+
                 }
 
-                 
+
                 currentTime = TimeToChangeAreas;
             }
 
             currentTime -= Time.deltaTime;
         }
-       
+
     }
 
     private GroundColor chooseColorToChange(GameObject area)
-    {   
-        
-        GroundColor areaColor = (GroundColor)Random.Range(0, 3);
-         
+    {
 
-        while(areaColor == area.GetComponent<GroundManager>().Color)
+        GroundColor areaColor = (GroundColor)Random.Range(0, 3);
+
+
+        while (areaColor == area.GetComponent<GroundManager>().Color)
         {
             areaColor = (GroundColor)Random.Range(0, 2);
-            
-             
+
+
         }
-           
-        
+
+
         return areaColor;
     }
 
@@ -89,5 +98,5 @@ public class EnemyMagic : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Miopia);
     }
 
-     
+
 }
