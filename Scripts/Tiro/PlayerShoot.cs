@@ -20,7 +20,7 @@ public class PlayerShoot : ShootAttack
         }
 
         // Cursor da mira
-        Vector2 target = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Cursor.transform.position = target;
     }
 }
