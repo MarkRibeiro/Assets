@@ -22,6 +22,7 @@ public class EnemyMagic : MonoBehaviour
     {
         currentTime = TimeToChangeAreas;
         animator= this.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        Player= GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
