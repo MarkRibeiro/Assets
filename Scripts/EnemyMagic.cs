@@ -8,9 +8,9 @@ public class EnemyMagic : MonoBehaviour
     public GameObject Player;
     public float Miopia = 100f;
 
-    public GameObject blueArea;
-    public GameObject redArea;
-    public GameObject yellowArea;
+    public GameObject[] blueArea;
+    public GameObject[] redArea;
+    public GameObject[] yellowArea;
 
     public float TimeToChangeAreas = 3;
 
@@ -46,22 +46,28 @@ public class EnemyMagic : MonoBehaviour
                 animator.SetBool("poder", false);
 
 
-                if (blueArea)
+                if (blueArea.Length > 0)
                 {
-
-                    blueArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(blueArea));
+                    foreach(GameObject area in blueArea)
+                    {
+                        area.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(area));
+                    }
 
                 }
-                if (redArea)
+                if (redArea.Length > 0)
                 {
-
-                    redArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(redArea));
+                    foreach (GameObject area in redArea)
+                    {
+                        area.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(area));
+                    }
 
                 }
-                if (yellowArea)
+                if (yellowArea.Length > 0)
                 {
-
-                    yellowArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(yellowArea));
+                    foreach (GameObject area in yellowArea)
+                    {
+                        area.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(area));
+                    }
 
                 }
 
