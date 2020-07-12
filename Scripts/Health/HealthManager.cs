@@ -22,7 +22,6 @@ public class HealthManager : MonoBehaviour
 
     public void loseLife(float value)
     {
-        Debug.Log("Perdeu vida");
         currentLife -= value;
     }
 

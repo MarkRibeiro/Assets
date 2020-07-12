@@ -385,7 +385,6 @@ GameObject:
   - component: {fileID: 3493437462063674853}
   - component: {fileID: 2111685071443834734}
   - component: {fileID: 6715300328994733927}
-  - component: {fileID: 6303080495393259400}
   m_Layer: 9
   m_Name: Enemy Tracker
   m_TagString: Enemy
@@ -513,7 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Miopia: 100
-  MoveSpeed: 4
+  MoveSpeed: 30
   dano: 10
 --- !u!50 &6715300328994733927
 Rigidbody2D:
@@ -530,38 +529,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6303080495393259400
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4306155021797113402}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.104004, y: 22.6}
-    newSize: {x: 8.6, y: 9.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.66, y: 16.38}
-  m_EdgeRadius: 0
 --- !u!1001 &6640822979125247787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,17 +545,17 @@ PrefabInstance:
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.5340104
+      value: 0.5340123
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.5702715
+      value: 0.57025623
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 6.3605576
+      value: 6.3605556
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}

@@ -8,7 +8,7 @@ public class EnemyTracker : MonoBehaviour
     public GameObject Player;
     public float Miopia = 100f;
 
-    public float MoveSpeed = 4;
+    public float MoveSpeed = 30;
     public float dano = 10;
 
     private Animator animator;
