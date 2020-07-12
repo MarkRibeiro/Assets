@@ -7,8 +7,10 @@ public class PlayerHealth : HealthManager
     [Header("Player Health Conguration")]
 
     public GameManager GameManager;
-    public GameObject[] lifes; 
+    public GameObject[] lifes;
 
+    private float TimeToContinuousDamage = 1;
+    private float currentDamageTime = 0;
 
     private void removeLifeFromHUD()
     {
@@ -35,6 +37,30 @@ public class PlayerHealth : HealthManager
             loseLife(collision.gameObject.GetComponent<BulletDamage>().getDamage());
             removeLifeFromHUD();
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (collision.gameObject.GetComponent<EnemyTracker>())
+            {
+                loseLife(collision.gameObject.GetComponent<EnemyTracker>().dano);
+                removeLifeFromHUD();
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            currentDamageTime += Time.deltaTime;
+
+            if (currentDamageTime >= TimeToContinuousDamage && collision.gameObject.GetComponent<EnemyTracker>())
+            {
+                loseLife(collision.gameObject.GetComponent<EnemyTracker>().dano);
+                removeLifeFromHUD();
+                currentDamageTime = 0;
+            }
         }
     }
 }
