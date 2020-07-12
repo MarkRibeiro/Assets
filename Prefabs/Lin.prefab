@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 1653620895400395080}
   - component: {fileID: 1653620895400395081}
   - component: {fileID: 1653620895400395082}
+  - component: {fileID: 3738958896452024593}
   m_Layer: 0
   m_Name: Lin
   m_TagString: Untagged
@@ -487,6 +488,25 @@ MonoBehaviour:
     m_Extent: {x: 3.3662739, y: 5.5404406, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!95 &3738958896452024593
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653620895400395083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 211a2445a0ead8b4f8f21b04000900b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1653620895444239516
 GameObject:
   m_ObjectHideFlags: 0
