@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236679442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.500066, y: 2.8569834, z: -5.5475473}
+  m_LocalPosition: {x: -11.50007, y: 2.8569834, z: -5.547547}
   m_LocalScale: {x: 0.55475473, y: 0.55475473, z: 0.55475473}
   m_Children: []
   m_Father: {fileID: 1653620895400395080}
@@ -39,7 +39,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236679442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b26c94c8e86a64efd910a556d112f5e0, type: 2}
   m_CullingMode: 0
@@ -438,9 +438,11 @@ GameObject:
   - component: {fileID: 613340007}
   - component: {fileID: 613340008}
   - component: {fileID: 613340011}
-  m_Layer: 0
+  - component: {fileID: 613340016}
+  - component: {fileID: 613340015}
+  m_Layer: 10
   m_Name: Lin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +481,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6d628025fd235429d91be1d1d2221d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -497,8 +499,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1963607265
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3e12d8ceb5b8a4c9abb25d5367399e7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -540,8 +542,8 @@ MonoBehaviour:
   - {fileID: 1653620895385132329}
   - {fileID: 1653620894859613261}
   m_Bounds:
-    m_Center: {x: -1.2758396, y: -0.52196836, z: 0}
-    m_Extent: {x: 3.3662732, y: 5.540439, z: 0}
+    m_Center: {x: -1.2758408, y: -0.52196074, z: 0}
+    m_Extent: {x: 3.3662734, y: 5.540442, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &3738958896452024593
@@ -657,6 +659,42 @@ MonoBehaviour:
   Speed: 100
   lastMoveVertical: 0
   lastMoveHorizontal: 0
+--- !u!58 &613340016
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653620895400395083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 400
+--- !u!250 &613340015
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653620895400395083}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_ForceMagnitude: -100
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 2
+  m_AngularDrag: 0
 --- !u!1 &1653620895444239516
 GameObject:
   m_ObjectHideFlags: 0
