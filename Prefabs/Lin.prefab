@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 613340008}
   - component: {fileID: 613340011}
   - component: {fileID: 6118117807910661799}
-  - component: {fileID: 8106848430839634487}
+  - component: {fileID: 1130221254577187025}
   m_Layer: 10
   m_Name: Lin
   m_TagString: Player
@@ -623,8 +623,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
---- !u!250 &8106848430839634487
+  m_Radius: 293.15
+--- !u!250 &1130221254577187025
 PointEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -636,7 +636,7 @@ PointEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 28672
-  m_ForceMagnitude: -100
+  m_ForceMagnitude: -50
   m_ForceVariation: 1.17
   m_DistanceScale: 1
   m_ForceSource: 0
