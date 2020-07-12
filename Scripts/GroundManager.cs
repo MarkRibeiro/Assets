@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public enum GroundColor { Red, Yellow,  Blue }
 
@@ -9,6 +10,10 @@ public class GroundManager : MonoBehaviour
     public GameObject Player;
 
     public GroundColor Color;
+
+    public Color Red;
+    public Color Yellow;
+    public Color Blue;
 
     private PlayerShoot shootAttack;
     private PlayerDash dash;
@@ -20,6 +25,26 @@ public class GroundManager : MonoBehaviour
         shootAttack = Player.GetComponent<PlayerShoot>();
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
+    }
+
+    public void ChangeColor(GroundColor color)
+    {
+        Color = color;
+
+        Light2D light = this.transform.GetChild(1).GetComponent<Light2D>();
+
+        if (color == GroundColor.Blue)
+        {
+            light.color = Blue;
+
+        } else if (color == GroundColor.Red)
+        {
+            light.color = Red;
+
+        } else if (color == GroundColor.Yellow)
+        {
+            light.color = Yellow;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
