@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3493437460947895465}
   - component: {fileID: 3493437460947895471}
   - component: {fileID: 3493437460947895464}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3493437461382877044}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3493437461406599897}
   - component: {fileID: 3493437461406599896}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 3493437461654548559}
   - component: {fileID: 3493437461654548557}
   - component: {fileID: 3493437461654548558}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3493437461673779726}
   - component: {fileID: 3493437461673779727}
   - component: {fileID: 3493437461673779720}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,8 +384,7 @@ GameObject:
   - component: {fileID: 3493437462063674855}
   - component: {fileID: 3493437462063674853}
   - component: {fileID: 2111685071443834734}
-  - component: {fileID: 6715300328994733927}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Enemy Tracker
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -512,29 +511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Miopia: 100
-  MoveSpeed: 30
+  MoveSpeed: 8
   dano: 10
---- !u!50 &6715300328994733927
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4306155021797113402}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1001 &6640822979125247787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,6 +520,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4306155021797113403}
     m_Modifications:
+    - target: {fileID: 6944746574749285344, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746575077500217, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746575257330392, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746575465066611, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746575530391703, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -550,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.57025623
+      value: 0.5702715
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
@@ -560,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 7.898652
+      value: 7.8986673
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976018, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
@@ -631,6 +634,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cogumelo guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576204976022, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576238569832, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576331290998, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576334378736, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576615262862, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944746576745506275, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a1a2bfd583ea6c4c8a6de21e254347d, type: 3}

@@ -22,7 +22,7 @@ public class GroundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player= GameObject.FindGameObjectWithTag("Player");
+        //Player = GameObject.FindGameObjectWithTag("Player");
         shootAttack = Player.GetComponent<PlayerShoot>();
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
@@ -47,34 +47,46 @@ public class GroundManager : MonoBehaviour
         {
             light.color = Yellow;
         }
+
+        deactivatePowers();
+    }
+
+    private void deactivatePowers()
+    {
+        // Desativa o tiro
+        if (Color == GroundColor.Red)
+        {
+            shootAttack.enabled = false;
+            dash.enabled = true;
+            jump.enabled = true;
+
+            // Desativa o dash
+        }
+        else if (Color == GroundColor.Yellow)
+        {
+
+            shootAttack.enabled = true;
+            dash.enabled = false;
+            jump.enabled = true;
+
+            // Desativa o pulo
+        }
+        else if (Color == GroundColor.Blue)
+        {
+
+            shootAttack.enabled = true;
+            dash.enabled = true;
+            jump.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Desativa o tiro
-            if (Color == GroundColor.Red) {
-
-                shootAttack.enabled = false;
-                dash.enabled = true;
-                jump.enabled = true;
-
-            // Desativa o dash
-            } else if (Color == GroundColor.Yellow) {
-
-                shootAttack.enabled = true;
-                dash.enabled = false;
-                jump.enabled = true;
-
-            // Desativa o pulo
-            } else if (Color == GroundColor.Blue) {
-
-                shootAttack.enabled = true;
-                dash.enabled = true;
-                jump.enabled = false;
-            }
+            deactivatePowers();
 
         }
     }
+
 }
