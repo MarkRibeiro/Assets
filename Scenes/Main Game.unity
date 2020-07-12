@@ -983,7 +983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304648954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71.05, y: -246.3, z: 0}
+  m_LocalPosition: {x: 43.7, y: -247.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1869151134}
@@ -2460,7 +2460,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1213041175}
+      objectReference: {fileID: 0}
     - target: {fileID: 7265799891997726898, guid: b98af5a1c0600432f895f372329491a4,
         type: 3}
       propertyPath: blueArea
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373eadf2e2b374368b53f11e0464c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1213041175}
+  Player: {fileID: 0}
   Color: 0
   Red: {r: 1, g: 0, b: 0, a: 1}
   Yellow: {r: 1, g: 0.99215686, b: 0, a: 1}
@@ -3299,12 +3299,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4517646095522429846, guid: 52093e01a219e44ada8649ebd53b9600,
     type: 3}
   m_PrefabInstance: {fileID: 2139454339}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1213041175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1653620895400395083, guid: 9f751ba17c78ecf4696e11aebad4c8c4,
-    type: 3}
-  m_PrefabInstance: {fileID: 251164209}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1224538706 stripped
 Transform:
@@ -3880,7 +3874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373eadf2e2b374368b53f11e0464c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1213041175}
+  Player: {fileID: 0}
   Color: 0
   Red: {r: 1, g: 0, b: 0, a: 1}
   Yellow: {r: 1, g: 0.99215686, b: 0, a: 1}
@@ -5346,19 +5340,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1670223297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 27.35, y: 1.2, z: -10}
-  m_XDamping: 4.16
-  m_YDamping: 2.13
-  m_ZDamping: 1.86
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+  m_Heading:
+    m_Definition: 0
+    m_VelocityFilterStrength: 4
+    m_Bias: 0
+  m_RecenterToTargetHeading:
+    m_enabled: 1
+    m_WaitTime: 1
+    m_RecenteringTime: 2
+    m_LegacyHeadingDefinition: -1
+    m_LegacyVelocityFilterStrength: -1
+  m_XAxis:
+    Value: 0
+    m_SpeedMode: 0
+    m_MaxSpeed: 300
+    m_AccelTime: 0.1
+    m_DecelTime: 0.1
+    m_InputAxisName: 0
+    m_InputAxisValue: 0
+    m_InvertInput: 1
+    m_MinValue: -180
+    m_MaxValue: 180
+    m_Wrap: 1
+    m_Recentering:
+      m_enabled: 0
+      m_WaitTime: 1
+      m_RecenteringTime: 2
+      m_LegacyHeadingDefinition: -1
+      m_LegacyVelocityFilterStrength: -1
+  m_LegacyRadius: 3.4028235e+38
+  m_LegacyHeightOffset: 3.4028235e+38
+  m_LegacyHeadingBias: 3.4028235e+38
+  m_HeadingIsSlave: 0
 --- !u!114 &1670223300
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -6176,7 +6202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873281781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71.05, y: -246.3, z: 0}
+  m_LocalPosition: {x: 43.7, y: -247.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1670223298}
@@ -6536,7 +6562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373eadf2e2b374368b53f11e0464c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1213041175}
+  Player: {fileID: 0}
   Color: 0
   Red: {r: 1, g: 0, b: 0, a: 1}
   Yellow: {r: 1, g: 0.99215686, b: 0, a: 1}

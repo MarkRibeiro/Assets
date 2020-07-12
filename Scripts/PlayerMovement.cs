@@ -9,10 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidbody;
     [HideInInspector] public float lastMoveVertical;
     [HideInInspector] public float lastMoveHorizontal;
+    private Animator animation;
 
     private void Awake()
     {
         rigidbody = this.GetComponent<Rigidbody2D>();
+        animation= this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,10 +38,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             moveHorizontal = -1;
+            transform.rotation= new Quaternion(0,180,0,0);
 
         } else if (Input.GetKey(KeyCode.D))
         {
             moveHorizontal = 1;
+            transform.rotation= new Quaternion(0,0,0,0);
         }
 
         lastMoveVertical = moveVertical;
@@ -47,10 +51,14 @@ public class PlayerMovement : MonoBehaviour
 
         movement.Set(moveHorizontal, moveVertical);
         Walk(movement, Speed);
+        if (moveVertical == 0 && moveHorizontal == 0){
+           animation.SetBool("Mexendo",false); 
+        }
     }
 
     public void Walk(Vector2 movement, float speed)
     {
+        animation.SetBool("Mexendo",true);
         movement = movement.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(rigidbody.position + movement);
     }
