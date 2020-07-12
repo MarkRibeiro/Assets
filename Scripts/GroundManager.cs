@@ -22,7 +22,7 @@ public class GroundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player= GameObject.FindGameObjectWithTag("Player");
+        //Player = GameObject.FindGameObjectWithTag("Player");
         shootAttack = Player.GetComponent<PlayerShoot>();
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
@@ -53,6 +53,8 @@ public class GroundManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("caralho KD");
+
             // Desativa o tiro
             if (Color == GroundColor.Red) {
 

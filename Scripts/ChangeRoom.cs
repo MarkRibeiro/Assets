@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ChangeRoom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject porta;
+    public GameObject inimigosAnterior;
+    public GameObject inimigosProximo;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        inimigosAnterior.SetActive(false);
+        inimigosProximo.SetActive(true);
+
+        porta.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
