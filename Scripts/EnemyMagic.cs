@@ -16,9 +16,12 @@ public class EnemyMagic : MonoBehaviour
 
     private float currentTime = 0;
 
+    private Animator animator;
+
     private void Start()
     {
         currentTime = TimeToChangeAreas;
+        animator= this.gameObject.transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,7 @@ public class EnemyMagic : MonoBehaviour
         {
             if (currentTime <= 0)
             {
-
+                 
                 if (blueArea)
                 {
                     blueArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(blueArea));
@@ -48,10 +51,15 @@ public class EnemyMagic : MonoBehaviour
 
             currentTime -= Time.deltaTime;
         }
+        else{
+            
+                animator.SetBool("poder",false);
+        }
     }
 
     private GroundColor chooseColorToChange(GameObject area)
     {
+        animator.SetBool("poder",true);
         GroundColor areaColor = (GroundColor)Random.Range(0, 3);
 
         while(areaColor == area.GetComponent<GroundManager>().Color)

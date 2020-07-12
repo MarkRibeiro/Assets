@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 538177586238285055}
   - component: {fileID: 4380930065605411283}
   - component: {fileID: 4800680558688542136}
+  - component: {fileID: 8921944976440893194}
   m_Layer: 0
   m_Name: "xam\xE3"
   m_TagString: Untagged
@@ -136,6 +137,25 @@ MonoBehaviour:
     m_Extent: {x: 4.846491, y: 5.167694, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!95 &8921944976440893194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534750933559179573}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 295a36166a5c8f4498ea09344d075ab9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2978316203752613358
 GameObject:
   m_ObjectHideFlags: 0
