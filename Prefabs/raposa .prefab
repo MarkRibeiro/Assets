@@ -421,8 +421,8 @@ MonoBehaviour:
   - {fileID: 1413149388943766980}
   - {fileID: 1413149388523641792}
   m_Bounds:
-    m_Center: {x: -0.27443218, y: -2.112246, z: 0}
-    m_Extent: {x: 4.349415, y: 6.8097377, z: 0}
+    m_Center: {x: -0.27443027, y: -2.1122384, z: 0}
+    m_Extent: {x: 4.349413, y: 6.80973, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &1413149389634861905
@@ -480,7 +480,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 500
+  m_Radius: 50
 --- !u!250 &1716153823
 PointEffector2D:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ PointEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1024
   m_ForceMagnitude: 0
   m_ForceVariation: 0
   m_DistanceScale: 1
