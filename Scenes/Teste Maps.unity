@@ -2469,17 +2469,17 @@ PrefabInstance:
     - target: {fileID: 2699536989379723225, guid: b98af5a1c0600432f895f372329491a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3372924985672495532, guid: b98af5a1c0600432f895f372329491a4,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3372924985672495532, guid: b98af5a1c0600432f895f372329491a4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7265799891997726898, guid: b98af5a1c0600432f895f372329491a4,
         type: 3}
@@ -9892,10 +9892,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1213041175}
-    - target: {fileID: 1037135846, guid: 7f8547a123f804d3c935f6a5c31336f2, type: 3}
-      propertyPath: Color
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6255329684360502569, guid: 7f8547a123f804d3c935f6a5c31336f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9969,10 +9965,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1213041175}
-    - target: {fileID: 1337344223, guid: cd022b2334bd143b0b34010abfc18a5b, type: 3}
-      propertyPath: Color
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7730729049654314967, guid: cd022b2334bd143b0b34010abfc18a5b,
         type: 3}
       propertyPath: m_Name

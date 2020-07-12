@@ -47,36 +47,46 @@ public class GroundManager : MonoBehaviour
         {
             light.color = Yellow;
         }
+
+        deactivatePowers();
+    }
+
+    private void deactivatePowers()
+    {
+        // Desativa o tiro
+        if (Color == GroundColor.Red)
+        {
+            shootAttack.enabled = false;
+            dash.enabled = true;
+            jump.enabled = true;
+
+            // Desativa o dash
+        }
+        else if (Color == GroundColor.Yellow)
+        {
+
+            shootAttack.enabled = true;
+            dash.enabled = false;
+            jump.enabled = true;
+
+            // Desativa o pulo
+        }
+        else if (Color == GroundColor.Blue)
+        {
+
+            shootAttack.enabled = true;
+            dash.enabled = true;
+            jump.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("caralho KD");
-
-            // Desativa o tiro
-            if (Color == GroundColor.Red) {
-
-                shootAttack.enabled = false;
-                dash.enabled = true;
-                jump.enabled = true;
-
-            // Desativa o dash
-            } else if (Color == GroundColor.Yellow) {
-
-                shootAttack.enabled = true;
-                dash.enabled = false;
-                jump.enabled = true;
-
-            // Desativa o pulo
-            } else if (Color == GroundColor.Blue) {
-
-                shootAttack.enabled = true;
-                dash.enabled = true;
-                jump.enabled = false;
-            }
+            deactivatePowers();
 
         }
     }
+
 }
