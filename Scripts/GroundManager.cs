@@ -22,9 +22,11 @@ public class GroundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player= GameObject.FindGameObjectWithTag("Player");
         shootAttack = Player.GetComponent<PlayerShoot>();
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
+
     }
 
     public void ChangeColor(GroundColor color)
