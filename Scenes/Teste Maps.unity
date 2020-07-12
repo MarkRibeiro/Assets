@@ -4299,11 +4299,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1618452436, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1618452436, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2044287613, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd, type: 3}
       propertyPath: Player
@@ -4372,7 +4372,7 @@ PrefabInstance:
     - target: {fileID: 844891061984334241, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd, type: 3}
