@@ -19,4 +19,10 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+
+     public void menu ()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
