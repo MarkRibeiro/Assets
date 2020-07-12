@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 10f;
 
     private Rigidbody2D rigidbody;
-    public float lastMoveVertical;
-    public float lastMoveHorizontal;
+    [HideInInspector] public float lastMoveVertical;
+    [HideInInspector] public float lastMoveHorizontal;
 
     private void Awake()
     {
