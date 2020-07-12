@@ -54,7 +54,8 @@ public class EnemyTracker : MonoBehaviour
 
         Vector3 direction = (Player.transform.position - this.transform.position).normalized;
 
-        transform.position += direction * MoveSpeed * Time.deltaTime;
+        if (!animator.GetBool("Atacando"))
+            transform.position += direction * MoveSpeed * Time.deltaTime;
     }
 
     
