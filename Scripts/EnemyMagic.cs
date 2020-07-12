@@ -29,44 +29,56 @@ public class EnemyMagic : MonoBehaviour
     {
         if (Vector2.Distance(Player.transform.position, this.transform.position) < Miopia)
         {
+             if (currentTime<=2){
+                     animator.SetBool("poder",true);  
+                }
             if (currentTime <= 0)
             {
-                 
+                animator.SetBool("poder",false);
+              
+                
                 if (blueArea)
                 {
+                    
                     blueArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(blueArea));
+                     
                 }
                 if (redArea)
                 {
+                     
                     redArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(redArea));
+                     
                 }
                 if (yellowArea)
                 {
+                      
                     yellowArea.GetComponent<GroundManager>().ChangeColor(chooseColorToChange(yellowArea));
+                     
                 }
 
-
+                 
                 currentTime = TimeToChangeAreas;
             }
 
             currentTime -= Time.deltaTime;
         }
-        else{
-            
-                animator.SetBool("poder",false);
-        }
+       
     }
 
     private GroundColor chooseColorToChange(GameObject area)
-    {
-        animator.SetBool("poder",true);
+    {   
+        
         GroundColor areaColor = (GroundColor)Random.Range(0, 3);
+         
 
         while(areaColor == area.GetComponent<GroundManager>().Color)
         {
             areaColor = (GroundColor)Random.Range(0, 2);
+            
+             
         }
-
+           
+        
         return areaColor;
     }
 
@@ -75,5 +87,10 @@ public class EnemyMagic : MonoBehaviour
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, Miopia);
+    }
+
+    public IEnumerator stophiting(){
+        yield return new WaitForSeconds(1f); 
+        animator.SetBool("poder",false);
     }
 }
