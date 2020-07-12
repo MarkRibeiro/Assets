@@ -525,12 +525,12 @@ PrefabInstance:
     - target: {fileID: 538177586238285055, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.32
+      value: 3.26
       objectReference: {fileID: 0}
     - target: {fileID: 538177586238285055, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.24
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 538177586238285055, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
@@ -577,6 +577,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 538177586238285055, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2746004
+      objectReference: {fileID: 0}
+    - target: {fileID: 538177586238285055, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4714148
+      objectReference: {fileID: 0}
     - target: {fileID: 1534750933559179573, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_Name
@@ -585,22 +595,22 @@ PrefabInstance:
     - target: {fileID: 4800680558688542136, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.97713995
+      value: -0.97714233
       objectReference: {fileID: 0}
     - target: {fileID: 4800680558688542136, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -2.552135
+      value: -2.5521355
       objectReference: {fileID: 0}
     - target: {fileID: 4800680558688542136, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 4.846496
+      value: 4.8464947
       objectReference: {fileID: 0}
     - target: {fileID: 4800680558688542136, guid: 7f0403f9c77246d4c92bf8388f87bcc2,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 5.1676865
+      value: 5.1677017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f0403f9c77246d4c92bf8388f87bcc2, type: 3}
