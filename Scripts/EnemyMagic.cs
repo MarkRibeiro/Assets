@@ -89,8 +89,5 @@ public class EnemyMagic : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Miopia);
     }
 
-    public IEnumerator stophiting(){
-        yield return new WaitForSeconds(1f); 
-        animator.SetBool("poder",false);
-    }
+     
 }
