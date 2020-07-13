@@ -49,18 +49,5 @@ public class PlayerHealth : HealthManager
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            currentDamageTime += Time.deltaTime;
-
-            if (currentDamageTime >= TimeToContinuousDamage && collision.gameObject.GetComponent<EnemyTracker>())
-            {
-                loseLife(collision.gameObject.GetComponent<EnemyTracker>().dano);
-                removeLifeFromHUD();
-                currentDamageTime = 0;
-            }
-        }
-    }
+  
 }

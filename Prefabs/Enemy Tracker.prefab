@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   Miopia: 100
-  MoveSpeed: 8
+  MoveSpeed: 15
   dano: 10
 --- !u!1001 &6640822979125247787
 PrefabInstance:
@@ -548,7 +548,7 @@ PrefabInstance:
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.5340123
+      value: 0.5340104
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
@@ -558,12 +558,12 @@ PrefabInstance:
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 6.3605556
+      value: 6.3605576
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976016, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 7.8986673
+      value: 7.898652
       objectReference: {fileID: 0}
     - target: {fileID: 6944746576204976018, guid: 5a1a2bfd583ea6c4c8a6de21e254347d,
         type: 3}
