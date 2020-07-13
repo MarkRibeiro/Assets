@@ -1103,6 +1103,10 @@ PrefabInstance:
       propertyPath: Cursor
       value: 
       objectReference: {fileID: 1992381012}
+    - target: {fileID: 613340011, guid: 9f751ba17c78ecf4696e11aebad4c8c4, type: 3}
+      propertyPath: Speed
+      value: 61.71
+      objectReference: {fileID: 0}
     - target: {fileID: 1653620895400395080, guid: 9f751ba17c78ecf4696e11aebad4c8c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5434,7 +5438,7 @@ PrefabInstance:
     - target: {fileID: 844891061984334240, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 844891061984334240, guid: af36ec3ad4dfe47ddb2d3eaa7098b3bd,
         type: 3}
@@ -29398,7 +29402,7 @@ PrefabInstance:
     - target: {fileID: 4306155021797113403, guid: d8edeaef2e98e473fab3a277839056de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4306155021797113403, guid: d8edeaef2e98e473fab3a277839056de,
         type: 3}
