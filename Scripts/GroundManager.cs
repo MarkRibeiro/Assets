@@ -7,44 +7,62 @@ public enum GroundColor { Red, Yellow,  Blue }
 
 public class GroundManager : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject Player;
 
-    public GroundColor Color;
+    public GroundColor groundColor;
 
     public Color Red;
     public Color Yellow;
     public Color Blue;
 
+    public float alpha = 43.0f;
+
     private PlayerShoot shootAttack;
     private PlayerDash dash;
     private PlayerJump jump;
 
+    public SpriteRenderer coelho;
+    public SpriteRenderer coruja;
+    private GameObject raposa;
+
+ 
     // Start is called before the first frame update
     void Start()
     {
-        //Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameObject.FindGameObjectWithTag("Player");
         shootAttack = Player.GetComponent<PlayerShoot>();
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
+
+        coelho= GameObject.FindGameObjectWithTag("coelho").GetComponent<SpriteRenderer>();
+        coruja= GameObject.FindGameObjectWithTag("coruja").GetComponent<SpriteRenderer>();
+        raposa= GameObject.FindGameObjectWithTag("raposa");
+    
+ 
+
 
     }
 
     public void ChangeColor(GroundColor color)
     {
-        Color = color;
+         groundColor = color;
+         
 
         Light2D light = this.transform.GetChild(1).GetComponent<Light2D>();
 
         if (color == GroundColor.Blue)
         {
+            
             light.color = Blue;
 
         } else if (color == GroundColor.Red)
         {
+           
             light.color = Red;
 
         } else if (color == GroundColor.Yellow)
         {
+             
             light.color = Yellow;
         }
 
@@ -53,31 +71,49 @@ public class GroundManager : MonoBehaviour
 
     private void deactivatePowers()
     {
+       
         // Desativa o tiro
-        if (Color == GroundColor.Red)
+        if ( groundColor == GroundColor.Red)
         {
+            Debug.Log("vermelho");
             shootAttack.enabled = false;
             dash.enabled = true;
             jump.enabled = true;
+            
+            
 
+            
+ 
+           
             // Desativa o dash
         }
-        else if (Color == GroundColor.Yellow)
+        else if ( groundColor == GroundColor.Yellow)
         {
-
+            Color invisivel=new Color(255,255,255);
+            invisivel.a= 0.43f;
+ 
+            
             shootAttack.enabled = true;
             dash.enabled = false;
-            jump.enabled = true;
+            jump.enabled = true; 
+            coelho.GetComponent<Animator>().SetBool("Inativo",true);
+            
+            
+           
 
             // Desativa o pulo
         }
-        else if (Color == GroundColor.Blue)
+        else if ( groundColor == GroundColor.Blue)
         {
 
             shootAttack.enabled = true;
             dash.enabled = true;
             jump.enabled = false;
+            coruja.GetComponent<SpriteRenderer>().color= new Color (255,255,255,alpha);
+
+            
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

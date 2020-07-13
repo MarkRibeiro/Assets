@@ -86,7 +86,7 @@ public class EnemyMagic : MonoBehaviour
         GroundColor areaColor = (GroundColor)Random.Range(0, 3);
 
 
-        while (areaColor == area.GetComponent<GroundManager>().Color)
+        while (areaColor == area.GetComponent<GroundManager>(). groundColor)
         {
             areaColor = (GroundColor)Random.Range(0, 2);
 
