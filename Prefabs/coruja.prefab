@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820359083019831}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1858715254}
   - component: {fileID: 1858715253}
   - component: {fileID: 1858715252}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: coruja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820359572998685}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820359618107450}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820359680470757}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820359793555866}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820360711861476}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134820360906045693}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
