@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     public void Walk(Vector2 movement, float speed)
     {
         animation.SetBool("Mexendo",true);
+         
+            
         movement = movement.normalized * speed * Time.deltaTime;
         rigidbody.MovePosition(rigidbody.position + movement);
     }

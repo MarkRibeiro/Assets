@@ -6,12 +6,18 @@ public class PlayerDash : MonoBehaviour
 {
     public float DashSpeed = 30f;
 
+    
+
     private PlayerMovement Player;
+    private Animator animator;
+    private bool candash=true;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = this.GetComponent<PlayerMovement>();
+        animator= this.GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -19,9 +25,24 @@ public class PlayerDash : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
+            if (candash){
             Vector2 Movement = new Vector2(Player.lastMoveHorizontal, Player.lastMoveVertical).normalized;
             Player.Walk(Movement, DashSpeed);
+            animator.SetBool("Dash",true);
+            StartCoroutine(dashcooldown());
+            }
+
         }
+
+        
     }
 
+    IEnumerator dashcooldown(){
+        candash=false;
+        yield return new WaitForSeconds(0.35f);
+        animator.SetBool("Dash",false);
+        yield return new WaitForSeconds(0.2f);
+        candash=true;
+
+    }
 }
