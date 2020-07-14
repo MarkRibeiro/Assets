@@ -25,7 +25,7 @@ public class PlayerJump : MonoBehaviour
              Vector2 Movement = new Vector2(Player.lastMoveHorizontal, Player.lastMoveVertical).normalized;
              
             animation.SetBool("Pulando", true);
-             Player.gameObject.GetComponent<SpriteRenderer>().color= Color.red;
+              
              Player.gameObject.GetComponent<BoxCollider2D>().enabled=false;
              
             
@@ -37,7 +37,7 @@ public class PlayerJump : MonoBehaviour
     IEnumerator Pulocooldown(){
         podepular=false;
          
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.25f);
         animation.SetBool("Mexendo", false);
         animation.SetBool("Pulando", false);
         Player.gameObject.GetComponent<BoxCollider2D>().enabled=true;
