@@ -127,6 +127,7 @@ public class GroundManager : MonoBehaviour
 
         }
     }
+    
     private void OnTriggerExit2D(Collider2D other) {
         raposa.GetComponent<Animator>().SetBool("Inativo",false);
         coruja.GetComponent<Animator>().SetBool("Inativo",false);

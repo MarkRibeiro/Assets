@@ -18,8 +18,10 @@ public class EnemyMagic : MonoBehaviour
 
     private Animator animator;
 
+   
     private void Start()
-    {
+    {   
+         
         currentTime = TimeToChangeAreas;
         animator = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
