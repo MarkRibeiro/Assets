@@ -1187,6 +1187,11 @@ PrefabInstance:
       propertyPath: lifes.Array.data[2]
       value: 
       objectReference: {fileID: 1735526656}
+    - target: {fileID: 3074620796855127393, guid: 9f751ba17c78ecf4696e11aebad4c8c4,
+        type: 3}
+      propertyPath: TotalHealthValue
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f751ba17c78ecf4696e11aebad4c8c4, type: 3}
 --- !u!1001 &257774727
