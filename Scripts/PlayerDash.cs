@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
-    public float DashSpeed = 30f;
+    public float DashSpeed = 90f;
 
     
 
