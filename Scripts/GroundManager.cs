@@ -21,9 +21,9 @@ public class GroundManager : MonoBehaviour
     private PlayerDash dash;
     private PlayerJump jump;
 
-    public SpriteRenderer coelho;
-    public SpriteRenderer coruja;
-    private GameObject raposa;
+    public  GameObject coelho;
+    public  GameObject coruja;
+    private GameObject  raposa;
 
  
     // Start is called before the first frame update
@@ -34,8 +34,8 @@ public class GroundManager : MonoBehaviour
         dash = Player.GetComponent<PlayerDash>();
         jump = Player.GetComponent<PlayerJump>();
 
-        coelho= GameObject.FindGameObjectWithTag("coelho").GetComponent<SpriteRenderer>();
-        coruja= GameObject.FindGameObjectWithTag("coruja").GetComponent<SpriteRenderer>();
+        coelho= GameObject.FindGameObjectWithTag("coelho");
+        coruja= GameObject.FindGameObjectWithTag("coruja");
         raposa= GameObject.FindGameObjectWithTag("raposa");
     
  
@@ -75,11 +75,13 @@ public class GroundManager : MonoBehaviour
         // Desativa o tiro
         if ( groundColor == GroundColor.Red)
         {
-            Debug.Log("vermelho");
+            Debug.Log("red");
             shootAttack.enabled = false;
             dash.enabled = true;
             jump.enabled = true;
-            
+            raposa.GetComponent<Animator>().SetBool("Inativo",true);
+            coruja.GetComponent<Animator>().SetBool("Inativo",false);
+            coelho.GetComponent<Animator>().SetBool("Inativo",false);
             
 
             
@@ -88,15 +90,15 @@ public class GroundManager : MonoBehaviour
             // Desativa o dash
         }
         else if ( groundColor == GroundColor.Yellow)
-        {
-            Color invisivel=new Color(255,255,255);
-            invisivel.a= 0.43f;
+        { 
  
-            
+            Debug.Log("Yellow");
             shootAttack.enabled = true;
             dash.enabled = false;
             jump.enabled = true; 
             coelho.GetComponent<Animator>().SetBool("Inativo",true);
+            raposa.GetComponent<Animator>().SetBool("Inativo",false);
+            coruja.GetComponent<Animator>().SetBool("Inativo",false);
             
             
            
@@ -105,12 +107,13 @@ public class GroundManager : MonoBehaviour
         }
         else if ( groundColor == GroundColor.Blue)
         {
-
+             Debug.Log("blue");
             shootAttack.enabled = true;
             dash.enabled = true;
             jump.enabled = false;
-            coruja.GetComponent<SpriteRenderer>().color= new Color (255,255,255,alpha);
-
+            coruja.GetComponent<Animator>().SetBool("Inativo",true);
+            raposa.GetComponent<Animator>().SetBool("Inativo",false);
+            coelho.GetComponent<Animator>().SetBool("Inativo",false);
             
         }
         
@@ -123,6 +126,11 @@ public class GroundManager : MonoBehaviour
             deactivatePowers();
 
         }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+        raposa.GetComponent<Animator>().SetBool("Inativo",false);
+        coruja.GetComponent<Animator>().SetBool("Inativo",false);
+        coelho.GetComponent<Animator>().SetBool("Inativo",false);
     }
 
 }
